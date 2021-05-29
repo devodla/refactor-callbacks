@@ -2,6 +2,12 @@ FROM node:14-alpine
 
 WORKDIR /src
 
+ADD package.json /src
+
+RUN npm i --silent
+
 ADD . /src
 
-CMD node ./promises.js
+RUN npm run build
+
+CMD npm start
