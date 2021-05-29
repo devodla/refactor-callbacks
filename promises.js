@@ -29,7 +29,7 @@ const functionToPromise = (func, ...args) => {
 
 const questionFunc = terminal.question.bind(terminal)
 const questionAsync = msg => functionToPromise(questionFunc, `${msg}\n`)
-
+;
 (async function main() {
   try {
     // await writeFileAsync('./teste', 'testando!!')
